@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Current Affairs Mock Test 2026</title>
+  <style>
+    body { font-family: Arial; background:#f4f6f9; padding:20px; }
+    .card { background:white; padding:20px; border-radius:10px; margin-bottom:15px; }
+    button { padding:10px 20px; background:green; color:white; border:none; border-radius:5px; }
+  </style>
+</head>
+<body>
+
+<h2>📝 Current Affairs Mock Test</h2>
+
+<form id="quizForm">
+
+<div class="card">
+<p><b>1. Who is known as the Flying Sikh?</b></p>
+<input type="radio" name="q1" value="A"> A) P.T. Usha<br>
+<input type="radio" name="q1" value="B"> B) Milkha Singh<br>
+<input type="radio" name="q1" value="C"> C) Neeraj Chopra<br>
+<input type="radio" name="q1" value="D"> D) Dhyan Chand<br>
+</div>
+
+<div class="card">
+<p><b>2. India became world’s ____ largest economy in 2026.</b></p>
+<input type="radio" name="q2" value="A"> A) 3rd<br>
+<input type="radio" name="q2" value="B"> B) 4th<br>
+<input type="radio" name="q2" value="C"> C) 5th<br>
+<input type="radio" name="q2" value="D"> D) 6th<br>
+</div>
+
+<div class="card">
+<p><b>3. Which state launched AI chatbot “Sarathi”?</b></p>
+<input type="radio" name="q3" value="A"> A) Gujarat<br>
+<input type="radio" name="q3" value="B"> B) Haryana<br>
+<input type="radio" name="q3" value="C"> C) Maharashtra<br>
+<input type="radio" name="q3" value="D"> D) Punjab<br>
+</div>
+
+<button type="button" onclick="checkAnswers()">Submit</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+function checkAnswers() {
+  let score = 0;
+
+  if(document.querySelector('input[name="q1"]:checked')?.value === "B") score++;
+  if(document.querySelector('input[name="q2"]:checked')?.value === "B") score++;
+  if(document.querySelector('input[name="q3"]:checked')?.value === "B") score++;
+
+  document.getElementById("result").innerHTML = "Your Score: " + score + "/3";
+}
+</script>
+
+</body>
+</html>
